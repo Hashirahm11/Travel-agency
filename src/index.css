@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0B1F3A;
+  --color-navy-dark: #061224;
+  --color-navy-light: #163259;
+  --color-navy-muted: #24416B;
+  
+  --color-gold: #C9A24B;
+  --color-gold-light: #E0C075;
+  --color-gold-dark: #A68233;
+  --color-gold-soft: #F5ECCE;
+
+  --color-ivory: #FAF7F2;
+  --color-ivory-warm: #F4EFE6;
+  --color-ivory-dark: #EAE3D5;
+
+  --color-teal: #1E6B7B;
+  --color-teal-light: #2A889C;
+  --color-teal-dark: #144E5A;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #FAF7F2;
+  color: #1A2433;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1F3A;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A24B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E0C075;
+}

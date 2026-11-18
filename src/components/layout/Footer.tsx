@@ -11,10 +11,10 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="bg-linear-to-b from-navy to-navy-dark text-slate-300 border-t border-gold/25">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-10 gap-y-12 pb-12 sm:pb-14 border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-12 sm:pt-20 pb-8">
+        <div className="grid grid-cols-2 gap-x-5 sm:gap-x-10 gap-y-10 sm:gap-y-12 lg:grid-cols-12 pb-10 sm:pb-14 border-b border-white/10">
           {/* Col 1: Brand & Bio */}
-          <div className="lg:col-span-4 space-y-5">
+          <div className="col-span-2 lg:col-span-4 space-y-5">
             <Logo variant="light" showTagline />
             <p className="text-sm sm:text-base text-slate-300 font-light leading-7 max-w-md">
               Wanderlux Travels crafts extraordinary, tailor-made journeys for discerning travelers. From pristine Maldivian lagoons and alpine Swiss chalets to the dramatic granite spires of northern Pakistan, we create memories beyond the ordinary.
@@ -49,7 +49,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Col 2: Quick Links */}
-          <div className="lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <h4 className="font-serif text-white text-lg font-semibold tracking-wide mb-5 flex items-center gap-2">
               <Compass className="w-4 h-4 text-gold" />
               <span>Explore</span>
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Col 3: Popular Destinations */}
-          <div className="lg:col-span-3">
+          <div className="col-span-1 lg:col-span-3">
             <h4 className="font-serif text-white text-lg font-semibold tracking-wide mb-5">
               Featured Destinations
             </h4>
@@ -99,7 +99,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Col 4: Services & Contact Consultation */}
-          <div className="lg:col-span-3">
+          <div className="col-span-2 lg:col-span-3">
             <h4 className="font-serif text-white text-lg font-semibold tracking-wide mb-5">
               Consultation Desk
             </h4>
@@ -145,7 +145,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Payment Methods & Legal Disclaimer */}
-        <div className="mt-8 rounded-2xl border border-white/10 bg-white/4 px-5 py-5 sm:px-6 sm:py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+        <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 px-4 py-5 sm:px-6 sm:py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
           <div className="flex items-start gap-3">
             <ShieldCheck className="w-5 h-5 text-gold shrink-0 mt-0.5" />
             <div>
@@ -162,7 +162,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 mt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-sm text-slate-400">
+        <div className="pt-6 mt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs sm:text-sm text-slate-400">
           <p>© {CURRENT_YEAR} Wanderlux Travels. All rights reserved.</p>
           <p>Prices shown in USD ($); all estimates are indicative.</p>
         </div>

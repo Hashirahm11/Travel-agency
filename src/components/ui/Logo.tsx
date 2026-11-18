@@ -17,13 +17,13 @@ export const Logo: React.FC<LogoProps> = ({
   const subTextColor = isLight ? 'text-gold-light' : 'text-gold-dark';
 
   return (
-    <Link to="/" className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${className}`} aria-label="Wanderlux Travels - Home">
+    <Link to="/" className={`inline-flex items-center gap-2 sm:gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-gold ${className}`} aria-label="Wanderlux Travels - Home">
       {/* Original Luxury Compass-Astrolabe Emblem */}
       <svg
         viewBox="0 0 48 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-10 h-10 transition-transform duration-500 group-hover:rotate-45"
+        className="w-8 h-8 sm:w-10 sm:h-10 shrink-0 transition-transform duration-500 group-hover:rotate-45"
         aria-hidden="true"
       >
         {/* Outer Ring */}
@@ -40,10 +40,10 @@ export const Logo: React.FC<LogoProps> = ({
       </svg>
 
       <div className="flex flex-col text-left">
-        <span className={`font-serif tracking-[0.22em] text-xl font-bold uppercase transition-colors ${textColor}`}>
+        <span className={`font-serif tracking-[0.14em] sm:tracking-[0.22em] text-lg sm:text-xl font-bold uppercase transition-colors ${textColor}`}>
           Wanderlux
         </span>
-        <span className={`text-[10px] tracking-[0.32em] font-medium uppercase font-sans -mt-0.5 ${subTextColor}`}>
+        <span className={`text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.32em] font-medium uppercase font-sans -mt-0.5 ${subTextColor}`}>
           Travels
         </span>
         {showTagline && (

@@ -135,7 +135,7 @@ export const Home: React.FC = () => {
       <Header transparentOnHero />
 
       {/* 2. HERO SECTION */}
-      <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden bg-navy">
+      <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-navy">
         {/* Cross-fade slider images */}
         {HERO_SLIDES.map((slide, idx) => (
           <div
@@ -157,7 +157,7 @@ export const Home: React.FC = () => {
         ))}
 
         {/* Hero Text Content */}
-        <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white pt-16">
+        <div className="relative z-20 max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 text-center text-white pt-20 pb-28 sm:pt-16 sm:pb-0">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-navy/60 border border-gold/30 backdrop-blur-md mb-6 animate-fadeIn">
             <Compass className="w-3.5 h-3.5 text-gold animate-spin-slow" />
             <span className="text-xs uppercase tracking-[0.25em] text-gold-light font-medium">
@@ -165,17 +165,17 @@ export const Home: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] max-w-4xl mx-auto">
+          <h1 className="font-serif text-3xl min-[360px]:text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] max-w-4xl mx-auto">
             Discover the World. <br />
             <span className="italic font-normal text-gold-light">Experience the Extraordinary.</span>
           </h1>
 
-          <p className="mt-6 text-base sm:text-xl font-light text-slate-200 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-5 sm:mt-6 text-sm min-[360px]:text-base sm:text-xl font-light text-slate-200 max-w-2xl mx-auto leading-relaxed">
             From breathtaking landscapes to unforgettable city escapes, explore extraordinary journeys crafted around the way you travel.
           </p>
 
           {/* Two CTA Buttons */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link
               to="/destinations"
               className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-gold to-gold-dark hover:from-gold-light hover:to-gold text-navy font-bold text-sm tracking-wide shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2 group"

@@ -50,12 +50,12 @@ export const Header: React.FC<HeaderProps> = ({ transparentOnHero = true }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
         useTransparent
-          ? 'bg-gradient-to-b from-navy/90 via-navy/50 to-transparent py-5'
-          : 'bg-navy/95 backdrop-blur-md shadow-lg border-b border-gold/15 py-3.5'
+          ? 'bg-gradient-to-b from-navy/90 via-navy/50 to-transparent py-3 sm:py-5'
+          : 'bg-navy/95 backdrop-blur-md shadow-lg border-b border-gold/15 py-2.5 sm:py-3.5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-2">
           {/* Logo */}
           <Logo variant="light" />
 
@@ -90,20 +90,20 @@ export const Header: React.FC<HeaderProps> = ({ transparentOnHero = true }) => {
           </div>
 
           {/* Mobile Hamburger Toggle */}
-          <div className="flex lg:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
             <Link
               to="/contact"
-              className="sm:hidden px-3.5 py-1.5 rounded-full bg-gold text-navy font-semibold text-[11px] uppercase tracking-wider"
+              className="sm:hidden px-3 py-2 rounded-full bg-gold text-navy font-semibold text-[10px] uppercase tracking-wide whitespace-nowrap"
             >
               Inquire
             </Link>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-xl text-slate-200 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-gold cursor-pointer"
+              className="p-2.5 rounded-xl text-slate-200 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-gold cursor-pointer"
               aria-label={isMobileMenuOpen ? 'Close Menu' : 'Open Menu'}
               aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6 text-gold" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-5 h-5 text-gold" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
@@ -111,15 +111,15 @@ export const Header: React.FC<HeaderProps> = ({ transparentOnHero = true }) => {
 
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-navy/98 border-t border-gold/20 shadow-2xl animate-fadeIn">
-          <div className="px-5 pt-4 pb-6 space-y-2">
+        <div className="lg:hidden max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain bg-navy/98 border-t border-gold/20 shadow-2xl animate-fadeIn">
+          <div className="px-4 sm:px-5 pt-3 sm:pt-4 pb-5 sm:pb-6 space-y-1.5 sm:space-y-2">
             {navLinks.map((link) => (
               <NavLink
                 key={link.path}
                 to={link.path}
                 end={link.path === '/'}
                 className={({ isActive }) =>
-                  `block px-4 py-2.5 rounded-xl text-sm font-medium tracking-wide transition-colors ${
+                  `block min-h-11 px-4 py-3 rounded-xl text-sm font-medium tracking-wide transition-colors ${
                     isActive
                       ? 'text-gold bg-white/10 font-semibold'
                       : 'text-slate-200 hover:text-white hover:bg-white/5'

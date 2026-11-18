@@ -57,7 +57,7 @@ export const Contact: React.FC = () => {
           containerClassName="absolute inset-0"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-linear-to-trom-navy via-navy/75 to-navy/60" />
+        <div className="absolute inset-0 bg-linear-to-t from-navy via-navy/75 to-navy/60" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Breadcrumbs
